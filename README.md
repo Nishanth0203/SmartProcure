@@ -69,7 +69,7 @@ In the deploy phase the developed project can be applied on a much larger scale 
 The above image is the home page of SHIKSHA, where the information of the project is described and where you can also find information regarding the problem we are trying to solve. We can find a "CONNECT" button at the top right corner, which when clicked directly opens your "METAMASK" interface, through which you can connect your Metamask account and start to fund the government schemes. You can also find two buttons named "DONATE" and "AUTHENTICATE," which are used to direct you to the donate page and the database of the people who have contributed to the scheme, respectively.
 
 ![image](https://user-images.githubusercontent.com/80589550/226415055-05b2321f-e2b1-49a6-9221-b0554655271c.png)
-The donation page, which may be accessed by any interested public or private organisations, is depicted in the above image. The form includes a public address that includes the public address of the account, the name of the company founder or the name of the organisation, contact information that is private only for security reasons, the donation amount they are funding toward the schemes, and the type of organisation, whether it is private or public. we are also ensuring that they are connecting to their metamask through the connect option at thr right corner, after which only their fund transfer would be successful
+The donation page, which may be accessed by any interested public or private organisations, is depicted in the above image. The form includes a public address that includes the public address of the account, and the amount of money in ETH which they are contributing towards the social cause.
 
 EXAMPLE:
 An example is illustrated below on how we can enter the details:
