@@ -20,10 +20,14 @@ require('dotenv').config
 
 const SellerModel = require('./Schema');
 // mongodb+srv://nishant:nishant@cluster0.cer6fkc.mongodb.net/?retryWrites=true&w=majority
-mongoose.connect('mongodb://0.0.0.0:27017/Donaters',
+mongoose.connect('mongodb+srv://nishant:nishant@cluster0.cer6fkc.mongodb.net/?retryWrites=true&w=majority',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
+    }).catch((err)=>{
+        console.log(err);
+    }).then((res)=>{
+        console.log("connnected");
     });
 
 app.get("/",async(req,res)=>{
