@@ -1,12 +1,16 @@
 import React from 'react';
-
 import Navbar from './components/Navbar';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+import SidebarRight from './components/SidebarRight';
+
+
 import Hero from './components/Hero';
 import Destinations from './components/Destinations';
 import Search from './components/Search';
 import Selections from './components/Selections';
 import Carousel from './components/Carousel';
-import Footer from './components/Footer';
 import Advantages from './components/Advantages';
 
 
@@ -15,14 +19,11 @@ import Advantages from './components/Advantages';
 const App = () => {
   return (
     <>
+      <Header />
       <Navbar />
-      <Hero />
-      <Destinations />
-      <Search />
-      <Advantages/>
-      {/* <Selections /> */}
-      <Carousel />
-      {/* <Footer /> */}
+      <Sidebar />
+      <Footer />
+      <SidebarRight />
     </>
   );
 };

@@ -12,7 +12,7 @@ import {
   Squares2X2Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import Avatar from '../assets/shiksha-logo.png';
+import Avatar from '../assets/symbol.jpg';
 
 import { AuthContext } from "../context/AuthContext";
 import { ethers } from "ethers";
@@ -176,11 +176,6 @@ export default function Example() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-10 w-auto sm:h-12"
-                src={Avatar}
-                alt="avatar image"
-              />
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
@@ -201,23 +196,29 @@ export default function Example() {
               href="#aboutBros"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              About Us
+              Active project
             </a>
 
             <a
               href="/Donate"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Donate
+              Awarded Projects
             </a>
 
             <a
               href="/Tables"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Donaters
+             Project Monitoring
             </a>
 
+            <a
+              href="/Tables"
+              className="text-base font-medium text-gray-500 hover:text-gray-900"
+            >
+             Bidder Registration
+            </a>
            
 
 
@@ -302,7 +303,7 @@ export default function Example() {
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
               onClick={connectWalletHandler}
             >
-              {isConnected ? `🟢 Connected` : `🔴 Not Connected`}
+              {isConnected ? `🟢 Wallet Connected` : `🔴 Connect Wallet`}
             </a>
           </div>
         </div>

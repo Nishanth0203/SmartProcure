@@ -1,0 +1,15 @@
+.main{
+    background-color: rgb(148, 173, 162);
+}
+
+.head{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.dis{
+    display: grid;
+    justify-content: center;
+
+}
