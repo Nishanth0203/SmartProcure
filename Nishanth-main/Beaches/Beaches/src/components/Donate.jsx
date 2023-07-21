@@ -3,6 +3,10 @@ import "./Donate.css";
 import axios from "../context/axios";
 import { AuthContext } from "../context/AuthContext";
 import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
+import Footer from "./Footer";
+import Header from "./Header";
+import SidebarRight from "./SidebarRight";
 import { ethers } from "ethers";
 
 const Sell = () => {
@@ -52,59 +56,11 @@ const Sell = () => {
   return (
     <div>
       <div>
+        <Header />
+        <SidebarRight />
         <Navbar />
-      </div>
-      <div>
-        <div className="register">
-          <div className="container">
-            <div className="title">Donation Form</div>
-            <div className="content">
-              <form action="#">
-                <div 
-                  className="user-details" 
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-end"
-                  }}
-                
-                >
-
-
-                <div className="input-box">
-                    <span className="details public">Public Address</span>
-                    <input
-                      type="text"
-                      placeholder="Enter your Public Address"
-                      style={{ width: "500px" }}
-                      required
-                      onChange={(e) => setPublicAddress(e.target.value)}
-                    />
-                  </div>
-                  <div className="input-box">
-                    <span className="details">Donation Amount</span>
-                    <input
-                      type="Number"
-                      placeholder="Enter your Price"
-                      required
-                      onChange={(e) => setDonation(e.target.value)}
-                    />
-                  </div>
-                 
-                 
-                  
-                </div>
-                <div className="button">
-                  <input
-                    type="submit"
-                    onClick={(e) => submitHandler(e)}
-                    value="Submit"
-                  />
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+        <Sidebar />
+        <Footer />
       </div>
       {/* <Footer/> */}
     </div>

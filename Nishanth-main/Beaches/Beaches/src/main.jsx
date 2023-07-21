@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 import Donate from '../src/components/Donate'
 import Tables from './components/Tables';
+import Projectmonitoring from './components/projectmonitoring';
+import Activeproject from './components/Activeproject';
 import { AuthProvider } from './context/AuthContext';
 
 
@@ -26,6 +28,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           {/* <Route index element={<LeagueStandings />} /> */}
         {/* </Route> */}
     <Route path="/Donate" element={<Donate/>}/>
+    <Route path="/Projectmonitoring" element={<Projectmonitoring/>}/>
+    <Route path="/Activeproject" element={<Activeproject/>}/>
     <Route path='/Tables' element={<Tables/>}/>
     </Routes>
   </BrowserRouter>

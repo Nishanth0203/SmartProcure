@@ -3,6 +3,10 @@ import { useState } from 'react';
 import SingleTable from './SingleTable'
 import axios from '../context/axios'
 import Navbar from './Navbar'
+import Sidebar from './Sidebar';
+import Header from './Header';
+import SidebarRight from './SidebarRight';
+import Footer from './Footer';
 
 const Tables = () => {
   const [data,setData] = useState([])
@@ -22,58 +26,12 @@ const Tables = () => {
   }, []);
   return (
     <div>
+      <div><Header/></div>
       <div><Navbar/></div>
-      <div className="container mx-auto px-4 sm:px-8">
-    <div className="py-8">
-      <div>
-        <h2 className="text-2xl font-semibold leading-tight">Invoices</h2>
-      </div>
-      <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-        <div
-          className="inline-block min-w-full shadow-md rounded-lg overflow-hidden"
-        >
-          <table className="min-w-full leading-normal">
-            <thead>
-              <tr>
-                <th
-                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
-                >
-                  Client / Address
-                </th>
-                <th
-                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
-                >
-                  Amount By:
-                </th>
-                <th
-                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
-                >
-                  Issued Bill
-                </th>
-                <th
-                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
-                >
-                  {/* Type */}
-                </th>
-                <th
-                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100"
-                ></th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              {/*  */}
-              <>
-              {data ? data.map((ele)=>(
-            <SingleTable data={ele} key={ele.PhoneNumber} />
-          )) : "no data to show"}
-              </>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <div><Sidebar/></div>
+      <div><SidebarRight/></div>
+      <div><Footer/></div>
     </div>
-  </div></div>
   )
 }
 

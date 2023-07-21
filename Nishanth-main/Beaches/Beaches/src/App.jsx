@@ -1,6 +1,10 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
+import HomePage from './components/Homepage';
+import LatestTenders from './components/LatestTenders';
+import Buttons from './components/Buttons';
+import ButtonBox from './components/ButtonsBox';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import SidebarRight from './components/SidebarRight';
@@ -21,6 +25,10 @@ const App = () => {
     <>
       <Header />
       <Navbar />
+      <HomePage />
+      <LatestTenders />
+      <ButtonBox />
+      <Buttons />
       <Sidebar />
       <Footer />
       <SidebarRight />

@@ -193,7 +193,7 @@ export default function Example() {
             </a>
 
             <a
-              href="#aboutBros"
+              href="/Activeproject"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Active project
@@ -207,7 +207,7 @@ export default function Example() {
             </a>
 
             <a
-              href="/Tables"
+              href="/projectmonitoring"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
              Project Monitoring
