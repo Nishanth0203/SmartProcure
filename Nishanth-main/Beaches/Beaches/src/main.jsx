@@ -11,6 +11,7 @@ import {
 import Donate from '../src/components/Donate'
 import Tables from './components/Tables';
 import Projectmonitoring from './components/projectmonitoring';
+import CreateNew from './components/CreateNew';
 import Activeproject from './components/Activeproject';
 import { AuthProvider } from './context/AuthContext';
 
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           {/* <Route index element={<LeagueStandings />} /> */}
         {/* </Route> */}
     <Route path="/Donate" element={<Donate/>}/>
+    <Route path="/CreateNew" element={<CreateNew/>}/>
     <Route path="/Projectmonitoring" element={<Projectmonitoring/>}/>
     <Route path="/Activeproject" element={<Activeproject/>}/>
     <Route path='/Tables' element={<Tables/>}/>
