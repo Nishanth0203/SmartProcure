@@ -8,9 +8,9 @@ const ProjectMonitoring = () => {
   // Sample data for the table
   const projects = [
     {
-      tenderName: 'Construction of New Office Building',
-      tenderStartDate: '2023-07-20',
-      awardedBidder: 'ABC Contractors',
+      tenderName: 'National Highway',
+      tenderStartDate: '2023-08-01',
+      awardedBidder: 'Peril Constructions',
       bidderAddress: '0x5a8b...d90f',
       projectCost: '1000000',
       projectStatus: 'In Progress',
@@ -18,7 +18,7 @@ const ProjectMonitoring = () => {
     {
       tenderName: 'Road Construction Project',
       tenderStartDate: '2023-08-05',
-      awardedBidder: 'XYZ Builders',
+      awardedBidder: 'MDR Builders',
       bidderAddress: '0x8e9f...c29a',
       projectCost: '1500000',
       projectStatus: 'Completed',
@@ -43,6 +43,24 @@ const ProjectMonitoring = () => {
       tenderName: 'Hospital Renovation Project',
       tenderStartDate: '2023-10-20',
       awardedBidder: 'JKL Constructions',
+      bidderAddress: '0x7a6c...fbd3',
+      projectCost: '900000',
+      projectStatus: 'In Progress',
+    },
+
+    {
+      tenderName: 'Highway Renovation Project',
+      tenderStartDate: '2023-10-20',
+      awardedBidder: 'IKL Constructions',
+      bidderAddress: '0x7a6c...fbd3',
+      projectCost: '900000',
+      projectStatus: 'In Progress',
+    },
+
+    {
+      tenderName: 'State Highway Renovation Project',
+      tenderStartDate: '2023-10-20',
+      awardedBidder: 'Parle Builders',
       bidderAddress: '0x7a6c...fbd3',
       projectCost: '900000',
       projectStatus: 'In Progress',
