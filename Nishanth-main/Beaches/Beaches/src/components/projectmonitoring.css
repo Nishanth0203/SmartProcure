@@ -54,7 +54,7 @@
   }
   
   .table-body {
-    animation: roll 0s linear infinite; /* Add animation properties for rolling effect */
+    animation: roll 10s linear infinite; /* Add animation properties for rolling effect */
   }
   
   /* Animation for rolling effect */

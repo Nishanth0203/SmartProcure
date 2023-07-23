@@ -1,7 +1,10 @@
+// LatestTenders.jsx
 import React, { useState, useEffect } from 'react';
 import './LatestTenders.css';
+import RFQSubmission from './RFQsubmission'; // Import the RFQSubmission component
 
 const tenderData = [
+  // ... (same as before)
   {
     title: 'Term contract for artificers works at residential Bldg at HQ',
     referenceNo: '8023/7/E8',
@@ -25,11 +28,12 @@ const tenderData = [
     closingDate: '10-Oct-2023 04:00 PM',
     bidOpeningDate: '11-Oct-2023 10:30 AM',
   },
-  // Add more sample data as needed
 ];
 
 const LatestTenders = () => {
   const [index, setIndex] = useState(0);
+  const [showRFQForm, setShowRFQForm] = useState(false);
+  const [selectedTenderTitle, setSelectedTenderTitle] = useState('');
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,27 +42,41 @@ const LatestTenders = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleTenderTitleClick = (tenderTitle) => {
+    setSelectedTenderTitle(tenderTitle);
+    setShowRFQForm(true);
+  };
+
+  const handleBackToTenders = () => {
+    setShowRFQForm(false);
+  };
+
   return (
     <div className="latest-tenders">
-      <h2>Latest Tenders</h2>
-      <div className="tender-container">
-        {tenderData.map((tender, idx) => (
-          <div
-            key={idx}
-            className={`tender-column ${idx === index ? 'active' : ''}`}
-          >
-            <a href="#">
-              <div className="tender-info">
-                <p>{tender.title}</p>
-                {tender.referenceNo && <p>Reference No: {tender.referenceNo}</p>}
-                <p>Closing Date: {tender.closingDate}</p>
-                <p>Bid Opening Date: {tender.bidOpeningDate}</p>
+      {showRFQForm ? (
+        // Render RFQSubmission component when showRFQForm is true
+        <RFQSubmission tenderTitle={selectedTenderTitle} handleBackToTenders={handleBackToTenders} />
+      ) : (
+        // Render latest tenders when showRFQForm is false
+        <>
+          <h2>Latest Tenders</h2>
+          <div className="tender-container">
+            {tenderData.map((tender, idx) => (
+              <div key={idx} className={`tender-column ${idx === index ? 'active' : ''}`}>
+                <a href="#" onClick={() => handleTenderTitleClick(tender.title)}>
+                  <div className="tender-info">
+                    <p>{tender.title}</p>
+                    {tender.referenceNo && <p>Reference No: {tender.referenceNo}</p>}
+                    <p>Closing Date: {tender.closingDate}</p>
+                    <p>Bid Opening Date: {tender.bidOpeningDate}</p>
+                  </div>
+                </a>
               </div>
-            </a>
+            ))}
           </div>
-        ))}
-      </div>
-      <p className="more">Latest Tenders updates every 15 mins. More...</p>
+          <p className="more">Latest Tenders updates every 15 mins. More...</p>
+        </>
+      )}
     </div>
   );
 };

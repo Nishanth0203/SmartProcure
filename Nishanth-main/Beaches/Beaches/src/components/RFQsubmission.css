@@ -1,0 +1,86 @@
+/* RFQSubmission.css */
+.rfq-submission-container {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: height 0.5s ease;
+  }
+  
+  .rfq-submission-container.active {
+    height: 400px;
+  }
+  
+  .rfq-submission-container h2 {
+    text-align: center;
+    color: #3498db;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .rfq-submission-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rfq-submission-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .rfq-submission-container input[type="text"],
+  .rfq-submission-container input[type="email"],
+  .rfq-submission-container input[type="tel"],
+  .rfq-submission-container textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .rfq-submission-container textarea {
+    resize: vertical;
+  }
+  
+  .rfq-submission-container .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .rfq-submission-container .form-actions button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .rfq-submission-container .form-actions .submit-btn {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .rfq-submission-container .form-actions .submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Style for scrollbar in the textarea (if needed) */
+  .rfq-submission-container textarea::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .rfq-submission-container textarea::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+  
+  
+  
